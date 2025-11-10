@@ -17,10 +17,10 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 15%;
 
-    /* Bright pink theme */
-    --primary: 330 100% 70%;
+    /* Black theme */
+    --primary: 0 0% 9%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 330 100% 85%;
+    --primary-light: 0 0% 20%;
     
     /* Chat green */
     --chat-green: 130 70% 88%;
@@ -32,7 +32,7 @@ All colors MUST be HSL.
     --muted: 0 0% 95%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 330 100% 70%;
+    --accent: 0 0% 9%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -40,16 +40,16 @@ All colors MUST be HSL.
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 330 100% 70%;
+    --ring: 0 0% 9%;
 
     --radius: 1rem;
     
     /* Gradients */
-    --gradient-pink: linear-gradient(135deg, hsl(330 100% 70%), hsl(330 100% 85%));
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 9%), hsl(0 0% 20%));
     
     /* Shadows */
-    --shadow-soft: 0 4px 20px rgba(255, 102, 179, 0.1);
-    --shadow-medium: 0 8px 30px rgba(255, 102, 179, 0.15);
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.15);
 
     --sidebar-background: 0 0% 98%;
 

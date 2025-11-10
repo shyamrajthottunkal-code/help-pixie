@@ -67,7 +67,7 @@ const NewComplaint = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary/10 to-primary-light/20">
+    <div className="min-h-screen bg-gradient-to-br from-muted to-secondary">
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
           <Button

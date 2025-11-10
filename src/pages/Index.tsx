@@ -24,7 +24,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/10 to-primary-light/20 py-20">
+      <section className="relative bg-gradient-to-br from-muted to-secondary py-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -66,7 +66,7 @@ const Index = () => {
             Why Choose Our Platform?
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-lg bg-primary/5 hover:shadow-lg transition-shadow">
+            <div className="text-center p-8 rounded-lg bg-muted hover:shadow-lg transition-shadow">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="h-8 w-8 text-white" />
               </div>
@@ -77,7 +77,7 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-lg bg-primary/5 hover:shadow-lg transition-shadow">
+            <div className="text-center p-8 rounded-lg bg-muted hover:shadow-lg transition-shadow">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <MessageSquare className="h-8 w-8 text-white" />
               </div>
@@ -88,7 +88,7 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-lg bg-primary/5 hover:shadow-lg transition-shadow">
+            <div className="text-center p-8 rounded-lg bg-muted hover:shadow-lg transition-shadow">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-white" />
               </div>
@@ -103,7 +103,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary-light text-white">
+      <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-4xl font-bold mb-6">
             Ready to Make Your Voice Heard?

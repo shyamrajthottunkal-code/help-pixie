@@ -108,7 +108,7 @@ const Auth = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 to-primary-light/20 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-muted to-secondary p-4">
       <Card className="w-full max-w-md p-8 shadow-xl">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-primary mb-2">
