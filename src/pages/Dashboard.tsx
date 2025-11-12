@@ -22,6 +22,7 @@ const Dashboard = () => {
   const [user, setUser] = useState<any>(null);
   const [complaints, setComplaints] = useState<Complaint[]>([]);
   const [loading, setLoading] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
     checkUser();
@@ -45,6 +46,16 @@ const Dashboard = () => {
     if (session?.user) {
       setUser(session.user);
       await fetchComplaints(session.user.id);
+      
+      // Check if user is admin
+      const { data: roleData } = await supabase
+        .from("user_roles")
+        .select("role")
+        .eq("user_id", session.user.id)
+        .eq("role", "admin")
+        .maybeSingle();
+      
+      setIsAdmin(!!roleData);
     } else {
       navigate("/auth");
     }
@@ -104,10 +115,17 @@ const Dashboard = () => {
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold text-primary">My Dashboard</h1>
-          <Button onClick={handleLogout} variant="ghost">
-            <LogOut className="h-4 w-4 mr-2" />
-            Logout
-          </Button>
+          <div className="flex gap-2">
+            {isAdmin && (
+              <Button onClick={() => navigate("/admin")} variant="outline">
+                Admin Panel
+              </Button>
+            )}
+            <Button onClick={handleLogout} variant="ghost">
+              <LogOut className="h-4 w-4 mr-2" />
+              Logout
+            </Button>
+          </div>
         </div>
       </header>
 
