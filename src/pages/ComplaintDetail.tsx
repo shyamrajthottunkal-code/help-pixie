@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { ArrowLeft, Send, Phone } from "lucide-react";
+import { ArrowLeft, Send, Phone, FileText, Image as ImageIcon, Video } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import EmojiPicker from "emoji-picker-react";
 
@@ -186,6 +186,34 @@ const ComplaintDetail = () => {
                     {new Date(complaint.created_at).toLocaleDateString()}
                   </p>
                 </div>
+                
+                {complaint.attachments && complaint.attachments.length > 0 && (
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-2">Attachments</p>
+                    <div className="space-y-2">
+                      {complaint.attachments.map((file: any, index: number) => (
+                        <a
+                          key={index}
+                          href={file.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 p-2 rounded-md bg-muted hover:bg-accent transition-colors"
+                        >
+                          {file.type?.startsWith('image/') && (
+                            <ImageIcon className="h-4 w-4 text-primary" />
+                          )}
+                          {file.type?.startsWith('video/') && (
+                            <Video className="h-4 w-4 text-primary" />
+                          )}
+                          {file.type?.startsWith('application/') && (
+                            <FileText className="h-4 w-4 text-primary" />
+                          )}
+                          <span className="text-xs truncate flex-1">{file.name}</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </Card>
           </div>
